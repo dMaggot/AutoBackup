@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.startup">
+      <startup
+            class="autobackup.AutoBackup">
+      </startup>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="autobackup.preferences.AutoBackupPreferenceInitializers">
+      </initializer>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="autobackup.preferences.AutoBackupPreferencesPage"
+            id="AutoBackup.AutoBackupPreferencesPage"
+            name="Auto Backup">
+      </page>
+   </extension>
+
+</plugin>
